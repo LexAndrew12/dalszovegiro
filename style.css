@@ -1,0 +1,30 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+header, #add-component, #export {
+  margin-bottom: 20px;
+}
+#editor textarea {
+  width: 100%;
+  height: 150px;
+}
+.hidden {
+  display: none;
+}
+#lyrics-list {
+  list-style: none;
+  padding: 0;
+}
+#lyrics-list li {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 5px;
+  background: #f9f9f9;
+}
+#lyrics-list li.dragging {
+  opacity: 0.5;
+}
+.editor-buttons button {
+  margin-right: 10px;
+}

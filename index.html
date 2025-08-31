@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dalszövegíró</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://unpkg.com/docx@8.3.2/build/index.js"></script>
+</head>
+<body>
+  <header>
+    <select id="project-select"></select>
+    <button id="new-project">Új projekt</button>
+  </header>
+
+  <section id="add-component">
+    <select id="component-type">
+      <option value="intro">Intro</option>
+      <option value="verse">Verze</option>
+      <option value="chorus">Refrén</option>
+      <option value="bridge">Bridge</option>
+      <option value="outro">Outro</option>
+    </select>
+    <button id="add-btn">Hozzáadás</button>
+  </section>
+
+  <section id="editor" class="hidden">
+    <h2 id="editor-title"></h2>
+    <textarea id="editor-text"></textarea>
+    <div class="editor-buttons">
+      <button id="save-btn">Mentés</button>
+      <button id="delete-btn">Törlés</button>
+      <button id="cancel-btn">Mégse</button>
+    </div>
+  </section>
+
+  <section id="lyrics">
+    <h2>Teljes dalszöveg</h2>
+    <ul id="lyrics-list"></ul>
+  </section>
+
+  <section id="export">
+    <button id="export-docx">Export DOCX</button>
+    <button id="export-pdf">Export PDF</button>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
